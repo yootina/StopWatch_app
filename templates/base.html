@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콩콩팥팥 스톱워치 게임</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <hr>
+        <a href="{% url 'articles:index' %}">Home</a>
+        <a href="{% url 'articles:create' %}">Create</a>
+        <hr>
+
+        <h2>콩콩팥팥 스톱워치 게임</h2>
+        <h1>
+            <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="millis">00</span>
+        </h1>
+        <button id="bt__start">START</button>
+        <button id="bt__stop">STOP</button>
+        <button id="bt__reset">RESET</button>
+        <p>2023 YGY Stopwatch App</p>
+    </div>
+    <div id="wrapper">
+        {% block body %}
+
+        {% endblock %}
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
